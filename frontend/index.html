@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pomodoro Timer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Pomodoro Timer</h1>
+
+        <p>Focus. Learn. Grow.</p>
+
+        <div class="mode-buttons">
+            <button onclick="setFocus()">Focus</button>
+            <button onclick="setBreak()">Break</button>
+        </div>
+
+        <div id="timer">25:00</div>
+
+        <div class="buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+
+    </main>
+<div class="tasks-section">
+
+    <h2>My Study Tasks</h2>
+
+    <div class="task-input">
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="What do you want to study?"
+        >
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+<div class="stats">
+    <div class="stat-card">
+        <h3>Focus Sessions</h3>
+        <p id="totalSessions">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Focus Minutes</h3>
+        <p id="totalMinutes">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Completed Tasks</h3>
+        <p id="completedTasks">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Pending Tasks</h3>
+        <p id="pendingTasks">0</p>
+    </div>
+<div class="achievement-card">
+    <h3>🏆 Your Achievement</h3>
+    <p id="achievementMessage">
+        Complete your first focus session to unlock your achievement!
+    </p>
+</div>
+</div>
+    <div id="taskList"></div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>
